@@ -116,6 +116,7 @@ ps.int <- transform_sample_counts(ps, function(x) trunc(x*100000))
 
 
 #feature selection----
+
 ##prepare feature data for training----
 ##metadata - just colonized, primary samples with corresponding toxigenic isolates ( n=52 CDI, n=78 carriage)
 meta.rf <- meta %>% 
@@ -183,10 +184,6 @@ meta.caret2 <- meta.caret2 %>% dplyr::rename(All_Abx_30d = all_abx_30d_binary,
 factor.vars <- c('Group', 'Sex', 'Race', 'cdtB', 'All_Abx_30d', 'IV_Vanc_30d', 'Ceph_30d', 'FQN_30d', 'Carb_30d')
 meta.caret2[, factor.vars] <- lapply(meta.caret2[, factor.vars], factor)
 
-
-
-#feature selection----
-
 ##partition out training cohort for feature selection
 set.seed(42)
 train_idx <- createDataPartition(meta.caret2$Group, p = 0.6, list=FALSE)
@@ -206,6 +203,7 @@ taxa.train.wclass$Row.names <- NULL
 
 
 
+##run Boruta----
 # FUNCTION: callBoruta helper function (called by runFeatureSelection() below)
 # Required packages: Boruta, stringr
 # Arguments:
@@ -266,6 +264,7 @@ taxa.caret.boruta.no.cd.top25 <- taxa.caret.col[, colnames(taxa.caret.col) %in% 
 
 #train random forest classifiers----
 
+##prepare data frames----
 ##define the test harness. Within the training cohort, will train using 10-fold cross-validation. 
 cv10 <- trainControl(method = 'cv', number = 10, classProbs = T, savePredictions = T)
 
@@ -396,15 +395,13 @@ train_rf_models <- function(data, control.harness, data.name.string,
 
 
 
-##train models (without shuffling class labels)
-##without c diff
+##train models (without shuffling class labels)----
 rf.no.cd <- train_rf_models(meta.wtax.no.cd, cv10, 'No C diff',
                             varsnot2norm, FALSE)
 
 
 
-##train model for null distributions (shuffle class labels)
-##without c diff
+##train model for null distributions (shuffle class labels)----
 rfN.no.cd <- train_rf_models(meta.wtax.no.cd, cv10, 'No C diff',
                              varsnot2norm, TRUE)
 
