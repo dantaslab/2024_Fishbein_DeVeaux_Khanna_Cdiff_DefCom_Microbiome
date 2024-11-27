@@ -99,7 +99,7 @@ p.tcdb <- tcdb.df %>%
 
 #Pathway differences between communities (Fig S4G)----
 
-dc.path.raw <- read.delim('Scripts/Anna/files_for_github/data/241127_DefComs_humann3_ra_v2mod.txt',
+dc.path.raw <- read.delim('Scripts/Anna/files_for_github/data/241127_DefComs_humann3_ra_v2mod_filt.txt',
                       row.names = 1) %>% 
   select(dc.meta$SampleName)
 
