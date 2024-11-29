@@ -97,7 +97,7 @@ filter(FMTsurvival,!(Donor%in%c("","5","7","8","22","3"))) %>%
 ```{r engraftment screen microbiome data input and formatting}
 FMT_total_md=read.delim("../data/241129_FMT_engraftment_metadata_v12_CFU_SRSF.txt",sep="\t",header=TRUE)
 row.names(FMT_total_md)=FMT_total_md$ID
-FMT_mphlan=read.delim("../data/240904_FMT_complete_metaphlan4_out_v2.txt",sep="\t",header=TRUE,check.names = FALSE)
+FMT_mphlan=read.delim("../data/241129_engraftment_mphlan4_raw.csv",sep=",",header=TRUE,check.names = FALSE)
 row.names(FMT_mphlan)<-FMT_mphlan$clade_name
 FMT_mphlan$clade_name=NULL
 FMT_mphlan <- FMT_mphlan[grepl('s__', rownames(FMT_mphlan)), ]
@@ -266,8 +266,8 @@ ggplot(CFU, aes(x = feature, y = coef, color = metadata)) + geom_point(aes(size 
 ```{r humann3 analyses}
 
 FMT_humann3 = read.delim(
-  "../data/240930_engraftment_humann3_ra_v3mod.txt",
-  sep = "\t",
+  "../data/241129_engraftment_humann3_raw.csv",
+  sep = ",",
   header = TRUE,
   check.names = FALSE
 )
