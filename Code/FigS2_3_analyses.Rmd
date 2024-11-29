@@ -1,0 +1,333 @@
+---
+title: "Microbiome_engraftment_analysis"
+output: html_document
+---
+
+```{r setup}
+library(phyloseq)
+library(vegan)
+library(rstatix)
+library(tidyr)
+library(Hmisc)
+library(dplyr)
+library(ggrepel)
+library(Maaslin2)
+library(matrixStats)
+library(survival)
+library(survminer)
+library(FSA)
+library(plyr)
+library(broom)
+library(ggbeeswarm)
+library(matrixStats)
+library(ggpubr)
+library(forcats)
+library(plyr)
+library(ggthemes)
+library(ggplot2)
+library(ggthemes)
+library(ggforce)
+library(corrplot)
+library(grDevices)
+```
+``` {r engraftment screen figure 2A }
+setwd("/Users/skye.f/Library/Mobile Documents/com~apple~CloudDocs/Desktop/EngraftmentScreen/")
+FMTsurvival<-read.csv("data/240516_FMT-mouse_data_v4.csv",header=TRUE)
+fit<-survfit(Surv(survt,died)~Donor,data = FMTsurvival)
+x=ggsurvplot(fit,data=FMTsurvival,size=2,ggtheme = theme_classic(),palette=c("black","black","black","black","black","black","black","darkolivegreen1","black","darkolivegreen3","black","darkgreen","black","darkgreen","darkolivegreen4","black"))
+ggpar(x,
+      font.main = c(15, "plain"),
+      font.x = c(15, "plain"),
+      font.y = c(15, "plain"),
+      font.caption = c(12, "plain"), 
+      font.legend = c(12, "plain"), 
+      font.tickslab = c(12, "plain"))
+```
+``` {r engraftment screen figure S2A}
+
+FMTsurvival_summary<-ddply(FMTsurvival,.(Donor),summarize,avg=mean(Minimum.Weight.Day.7))
+FMTsurvival$Donor=factor(FMTsurvival$Donor,levels=FMTsurvival_summary$Donor[order(FMTsurvival_summary$avg,decreasing = TRUE)])
+stats=compare_means(Minimum.Weight.Day.7~Donor,FMTsurvival,method="t.test",paired=FALSE,p.adjust.method = "bonferroni",ref.group="HV")
+stats <- stats %>%
+ mutate(y.position = seq(118,101,by=-1.2))
+ggplot(FMTsurvival,aes(x=Donor,y=Minimum.Weight.Day.7))+geom_boxplot(outlier.shape=NA)+geom_point()+theme_classic() +theme(legend.position = "right",axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x = element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Donor")+xlab("Donor")+ylab("Minimum Weight-loss (%)")+stat_pvalue_manual(stats,label="p.adj",hide.ns = TRUE)
+```
+``` {r engraftment screen figure S2B}
+FMTlethality=read.csv("../data/240516_FMT_lethality_Cd_CFU_v2.csv",header=TRUE)
+ggplot(FMTlethality,aes(x=CFU.mL,y=Survival,label=Donor))+geom_point(size=3,alpha=0.7)+theme_classic() +theme(legend.position = "right",axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x = element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Inoculum CFU/mL")+ylab("Mouse Survival Fraction")+scale_x_log10()+stat_cor(method="spearman")+geom_text(nudge_x = 0.05,nudge_y = 0.05)
+```
+``` {r engraftment screen figure S2C}
+FMTsurvival_summary<-ddply(FMTsurvival,.(Donor),summarize,avg=mean(CFU.Ratio,na.rm = TRUE))
+FMTsurvival$Donor=factor(FMTsurvival$Donor,levels=FMTsurvival_summary$Donor[order(FMTsurvival_summary$avg,decreasing = TRUE)])
+statstest=dunnTest(CFU.Ratio~Donor,method = "by",data=filter(FMTsurvival,!(Donor%in%c("A","5","7","8","22"))))
+filter(FMTsurvival,!(Donor%in%c("HV","5","7","8","22"))) %>%
+  ggplot(aes(x=Donor,y=CFU.Ratio))+geom_boxplot(outlier.shape=NA)+geom_point()+theme_classic()+theme(legend.position = "right",axis.title.y = element_text(size=15),axis.title.x = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Donor")+ylab("C. difficile CFU/mg Ratio")+scale_y_log10()+stat_compare_means()
+```
+``` {r engraftment screen figure S2D}
+FMTsurvival_summary<-ddply(FMTsurvival,.(Donor),summarize,avg=mean(Toxin.Ratio,na.rm = TRUE))
+FMTsurvival$Donor=factor(FMTsurvival$Donor,levels=FMTsurvival_summary$Donor[order(FMTsurvival_summary$avg,decreasing = TRUE)])
+filter(FMTsurvival,!(Donor%in%c("HV","5","7","8","22"))) %>%
+  ggplot(aes(x=Donor,y=Toxin.Ratio))+geom_boxplot(outlier.shape=NA)+geom_point()+theme_classic() +theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Donor")+ylab("TcdB Ratio")+scale_y_log10()+stat_compare_means()
+```
+``` {r engraftment screen figure 3A}
+sub=filter(FMTsurvival,!(Donor%in%c("HV")))
+statstest<-dunnTest(Minimum.Weight.Day.7~Strain, data = sub,method="bh")
+statstest$res$group1<-c("","","ST2","","ST2","ST42","","ST2","ST42","ST43")
+statstest$res$group2=c("ST2","ST42","ST42","ST43","ST43","ST43","ST8","ST8","ST8","ST8")
+filter(FMTsurvival,!(Donor%in%c("HV"))) %>%
+  ggplot(aes(x=Strain,y=Minimum.Weight.Day.7))+geom_boxplot(outlier.shape=NA)+geom_jitter()+theme_classic() +theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Strain Group")+ylab("Minimum Weight-loss (%)")+stat_pvalue_manual(statstest$res[statstest$res$P.adj<0.05,],label="P.adj",y=c(98,101,104,107,110,113))
+```
+```{r engraftment screen figure 3B}
+sub=filter(FMTsurvival,!(Donor%in%c("HV","5","7","8","22")))
+statstest<-dunnTest(CFU.Ratio~Strain, data = sub,method="bh")
+statstest$res$group1<-c("","","ST2")
+statstest$res$group2=c("ST2","ST42","ST42")
+filter(FMTsurvival,!(Donor%in%c("HV","5","7","8","22","3"))) %>%
+  ggplot(aes(x=Strain,y=CFU.Ratio))+geom_boxplot(outlier.shape=NA)+geom_jitter()+theme_classic() +theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Donor")+ylab("C. difficile CFU/mg Ratio")+scale_y_log10()+stat_pvalue_manual(statstest$res[statstest$res$P.adj<0.05,],label="P.adj",y=c(0.8,1))
+```
+```{r engraftment screen figure 3C}
+sub=filter(FMTsurvival,!(Donor%in%c("HV","5","7","8","22","3")))
+statstest<-dunnTest(Toxin.Ratio~Strain, data = sub,method="bh")
+statstest$res$group1<-c("","","ST2")
+statstest$res$group2=c("ST2","ST42","ST42")
+cts=table(filter(FMTsurvival,!(Donor%in%c("HV","5","7","8","22","3"))))
+filter(FMTsurvival,!(Donor%in%c("","5","7","8","22","3"))) %>%
+  ggplot(aes(x=Strain,y=Toxin.Ratio))+geom_boxplot(outlier.shape=NA)+geom_jitter()+theme_classic() +theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Donor")+ylab("TcdB Ratio")+scale_y_log10()+stat_pvalue_manual(statstest$res,label="P.adj",y=c(0.8,1,1.2))
+```
+```{r engraftment screen microbiome data input and formatting}
+FMT_total_md=read.delim("../data/241129_FMT_engraftment_metadata_v12_CFU_SRSF.txt",sep="\t",header=TRUE)
+row.names(FMT_total_md)=FMT_total_md$ID
+FMT_mphlan=read.delim("../data/240904_FMT_complete_metaphlan4_out_v2.txt",sep="\t",header=TRUE,check.names = FALSE)
+row.names(FMT_mphlan)<-FMT_mphlan$clade_name
+FMT_mphlan$clade_name=NULL
+FMT_mphlan <- FMT_mphlan[grepl('s__', rownames(FMT_mphlan)), ]
+#now get rid of rows that also include the 'taxa' level
+FMT_mphlan <- FMT_mphlan [!grepl('t__', rownames(FMT_mphlan)), ]
+samples <- colnames(FMT_mphlan)
+clean_taxa=lapply(row.names(FMT_mphlan),function (myline) {strsplit(myline,"[a-z]__")})
+taxa_df=vector()
+
+for (i in seq(length(clean_taxa))){
+  taxa_df=rbind(taxa_df,gsub("\\|","",clean_taxa[[i]][[1]][2:8]))
+}
+row.names(taxa_df)=row.names(FMT_mphlan)
+colv=c("Kingdom","Phylum","Class","Order","Family","Genus","Species")
+colnames(taxa_df)=colv
+row.names(FMT_mphlan)<-taxa_df[,7]
+row.names(taxa_df)<-taxa_df[,7]
+FMT_mphlan[FMT_mphlan<0.1]<-0
+```
+```{r engraftment screen microbiome data filtering}
+seq_filter=row.names(FMT_total_md)[FMT_total_md$SeqFilter=="Keep"]
+Cdiffcor=row.names(FMT_total_md)[FMT_total_md$In.vivo.Analysis=="Keep"]
+#this is including control samples
+FMT_total_md_seq=FMT_total_md[seq_filter,]
+FMT_mphlan_seq=FMT_mphlan[,colnames(FMT_mphlan) %in% seq_filter]
+FMT_mphlan_filt=t(t(FMT_mphlan_seq)/rowSums(t(FMT_mphlan_seq))*100)
+FMT_mphlan_filt=FMT_mphlan_filt[rowSums(FMT_mphlan_filt)>0,]
+
+ps_taxa_df=taxa_df[row.names(FMT_mphlan_filt),]
+
+FMT_ps_species=phyloseq(otu_table(FMT_mphlan_filt, taxa_are_rows = TRUE),
+                   sample_data(FMT_total_md_seq),
+                   tax_table(ps_taxa_df))
+FMT_ps_species.int<- transform_sample_counts(FMT_ps_species, function(x) trunc(x*100000))
+#this is without control samples for cdiff analysis
+colonized_keep=intersect(seq_filter,Cdiffcor)
+FMT_Cd_md_seq=FMT_total_md[colonized_keep,]
+FMT_mphlan_Cd=FMT_mphlan_filt[,colonized_keep]
+Cd_taxa_df=taxa_df[row.names(FMT_mphlan_Cd),]
+CdFMT_ps_species=phyloseq(otu_table(FMT_mphlan_Cd, taxa_are_rows = TRUE),
+                   sample_data(FMT_Cd_md_seq),
+                   tax_table(Cd_taxa_df))
+CdFMT_ps_species.int<- transform_sample_counts(CdFMT_ps_species, function(x) trunc(x*100000))
+CdFMT_ps_genus=tax_glom(CdFMT_ps_species,"Genus")
+CdFMT_ps_genus.int<-transform_sample_counts(CdFMT_ps_genus,function(x) trunc(x*100000))
+CdFMT_genus=otu_table(CdFMT_ps_genus)
+row.names(CdFMT_genus)<-Cd_taxa_df[row.names(CdFMT_genus),6]
+
+```
+```{r engraftment screen microbiome figure 2E}
+humanpsfilt=readRDS("../data/ps_human_m4_final.rds")
+CdFMT_species_richness=vegan::specnumber(t(otu_table(CdFMT_ps_species.int)))
+CdFMT_species_Shannon=vegan::diversity(t(otu_table(CdFMT_ps_species.int)),index = "shannon")
+CdFMT_species_evenness=CdFMT_species_Shannon/log(CdFMT_species_richness)
+alpha=data.frame(CdFMT_species_richness,CdFMT_species_Shannon,CdFMT_species_evenness)
+alpha_df=merge(alpha,sample_data(CdFMT_ps_species.int),by="row.names")
+alpha_df=alpha_df[alpha_df$Timepoint==21,]
+medhuman=median(specnumber(t(otu_table(subset_samples(humanpsfilt,Group%in%c("CDI","carrier"))))))
+alpha_df_summary<-ddply(alpha_df,.(DonorID),summarize,avg=mean(CdFMT_species_richness))
+alpha_df$DonorID=factor(alpha_df$DonorID,levels=alpha_df_summary$DonorID[order(alpha_df_summary$avg,decreasing = TRUE)])
+cts=alpha_df %>% count("DonorID")
+cts_df=merge(alpha_df,cts,by="DonorID")
+ggplot(cts_df,aes(x = DonorID, y = CdFMT_species_richness)) +geom_boxplot(outlier.shape = NA)+geom_text(aes(label=freq))+geom_hline(yintercept =medhuman,linetype=2)+geom_jitter(alpha=0.6) + xlab("Donor") + ylab("Species(MetaPhlAn4)")+theme_classic() +theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+stat_compare_means()
+
+```
+```{r engraftment screen microbiome figure 3D}
+interestcolor=c("#800000","#9A6324","#808000","#469990","#000075","#911eb4","#e6194B","#f58231","#3cb44b","#42d4f4","#4363d8","#ffe119","#bfef45","#f032e6","#aaffc3","#000000")
+interestname=c("Donor 1", "Donor 10", "Donor 13","Donor 14","Donor 15","Donor 16","Donor 2", "Donor 24","Donor 4","Donor 6","Donor 3","Donor 8","Donor 22","HV")
+names(interestcolor)<-interestname
+FMT_total_speciesOrd<-ordinate(FMT_ps_species.int,"PCoA")
+plot_ordination(FMT_ps_species.int,FMT_total_speciesOrd,type="samples",color="DonorID")
+t=plot_ordination(FMT_ps_species.int,FMT_total_speciesOrd,type="samples",color="DonorID",justDF=TRUE)
+a=filter(t,Timepoint==21) %>%
+  ggplot(aes(x=Axis.1,y=Axis.2,color=DonorID))+geom_point(size=5,alpha=0.7)+scale_color_manual(values=interestcolor)+theme_classic()+xlab("Axis.1[19%]")+ylab("Axis.2[13.2%]")+theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black",size=0.5))
+fig_height=5
+fig_width=5
+ggsave('/Users/skye.f/Library/Mobile Documents/com~apple~CloudDocs/Desktop/EngraftmentScreen/241129_FMT_species_pcoa.pdf', plot=a,
+       width=fig_width, height=fig_height,
+       units='in',device="pdf")
+```
+```{r engraftment screen microbiome figure 3E}
+filter(t, Timepoint == 21) %>%
+  ggplot(aes(x = Axis.1, y = Toxin)) + geom_point(size = 3, alpha = 0.6) +
+  geom_smooth(method = "lm") + stat_cor(method = "spearman") + theme_classic() +
+  theme(
+    legend.position = "right",
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15),
+    axis.text.y = element_text(size = 15),
+    axis.text.x = element_text(
+      size = 12,
+      angle = 45,
+      hjust = 1
+    ),
+    strip.text.x = element_text(size = 15),
+    panel.border = element_rect(
+      fill = NA,
+      colour = "black",
+      size = 0.5
+    )
+)
+```
+```{r engraftment screen microbiome figure 3E}
+filter(t, Timepoint == 21) %>%
+  ggplot(aes(x = Axis.1, y = LogCFU)) + geom_point(size = 3, alpha = 0.6) +
+  geom_smooth(method = "lm") + stat_cor(method = "spearman") + theme_classic() +
+  theme(
+    legend.position = "right",
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15),
+    axis.text.y = element_text(size = 15),
+    axis.text.x = element_text(
+      size = 12,
+      angle = 45,
+      hjust = 1
+    ),
+    strip.text.x = element_text(size = 15),
+    panel.border = element_rect(
+      fill = NA,
+      colour = "black",
+      size = 0.5
+    )
+  )
+
+```
+```{r engraftment screen microbiome figure S2E}
+CFU_ps=subset_samples(CdFMT_ps_genus,!is.na(LogCFU))
+ggplot(sample_data(CFU_ps), aes(x=Timepoint,y=LogCFU,color=DonorID,fill=DonorID))+geom_point()+geom_smooth(method="lm",alpha=0.2)+facet_wrap(~DonorID)+theme_classic()+theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+scale_color_manual(values=interestcolor)+scale_fill_manual(values=interestcolor)
+
+```
+```{r engraftment screen microbiome figure 3F}
+CdFMT_genus_counts=otu_table(CFU_ps)
+row.names(CdFMT_genus_counts)=Cd_taxa_df[row.names(CdFMT_genus_counts),6]
+FMT_ps_speciesOrd<- ordinate(CFU_sampletype, "PCoA")
+p2 = plot_ordination(CFU_sampletype,FMT_ps_speciesOrd, type="samples",color="DonorID",justDF = TRUE)
+final=merge(p2,t(otu_table(CFU_sampletype)[78]),by="row.names")
+row.names(final)<-final$Row.names
+f=Maaslin2::Maaslin2(CdFMT_genus_counts,final,'genus_strain_toxinCFU',transform="LOG",fixed_effects =c("LogCFU","Timepoint","Toxin"),random_effects = c("DonorID","Cdiffstrain","CageAZ","Sex","IndividualRxn"),normalization = "NONE",min_prevalence=0.2)
+CFU=f$results%>%
+  filter(qval<0.1)%>%
+  filter(metadata!="Timepoint")
+
+CFU$feature=factor(CFU$feature,levels=unique(CFU$feature[order(CFU$coef)]))
+ggplot(CFU, aes(x = feature, y = coef, color = metadata)) + geom_point(aes(size = -log10(qval))) + theme_classic() + xlab("Species") + ylab("Coefficient") +
+  theme(
+    legend.position = "right",
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15),
+    axis.text.y = element_text(size = 15),
+    axis.text.x = element_text(
+      size = 12,
+      angle = 45,
+      hjust = 1
+    ),
+    strip.text.x = element_text(size = 15),
+    panel.border = element_rect(
+      fill = NA,
+      colour = "black",
+      size = 0.5
+    )
+  ) + geom_hline(yintercept = 0, linetype = 2) + scale_color_colorblind()
+
+
+```
+
+```{r humann3 analyses}
+
+FMT_humann3 = read.delim(
+  "../data/240930_engraftment_humann3_ra_v3mod.txt",
+  sep = "\t",
+  header = TRUE,
+  check.names = FALSE
+)
+metacyc = read.delim("../data/231205_Pwys_metacyc_directparent.txt",
+                     sep = "\t",
+                     header = FALSE)
+colnames(metacyc) <- c("PWY_name", "Agg_pwy")
+row.names(metacyc) <- metacyc$PWY_name
+row.names(FMT_humann3) = FMT_humann3$`# Pathway`
+FMT_humann3$`# Pathway` <- NULL
+fmt_humann_aggregated = FMT_humann3[-which(row.names(FMT_humann3) == "UNMAPPED"), ]
+fmt_humann_aggregated = fmt_humann_aggregated[-which(row.names(fmt_humann_aggregated) ==
+                                                       "UNINTEGRATED"), ]
+fmt_humann_cut = t(t(fmt_humann_aggregated) / rowSums(t(fmt_humann_aggregated))) *
+  100
+fmt_humann_cut[fmt_humann_cut < 0.01] <- 0
+fmt_humann_rescale = t(t(fmt_humann_cut) / rowSums(t(fmt_humann_cut))) *
+  100
+fmt_agg_humann = merge(metacyc, fmt_humann_rescale, by = "row.names")
+fmt_agg_humann$Row.names <- NULL
+fmt_agg_humann$PWY_name <- NULL
+fmt_agg_hdf = ddply(fmt_agg_humann, .(Agg_pwy), numcolwise(sum))
+row.names(fmt_agg_hdf) <- fmt_agg_hdf$Agg_pwy
+fmt_agg_hdf$Agg_pwy <- NULL
+CFU_t = filter(t, !(is.na(LogCFU)))
+fit = Maaslin2::Maaslin2(
+  fmt_humann_rescale,
+  CFU_t,
+  'CFUtoxin_humann3_prev20',
+  fixed_effects = c("LogCFU", "Timepoint", "Toxin"),
+  min_prevalence = 0.2,
+  transform = "LOG",
+  random_effects = c("DonorID", "Cdiffstrain", "CageAZ", "Sex", "IndividualRxn"),
+  normalization = "NONE",
+  min_abundance = 0
+)
+
+humann = fit$results[fit$results$qval < 0.1, ]
+humann <- filter(humann, metadata == "LogCFU")
+humann$feature = factor(humann$feature, levels = unique(humann$feature[order(humann$coef)]))
+
+ggplot(humann, aes(x = feature, y = coef)) + geom_point(aes(size = -log10(qval))) +
+  xlab("MetaCyc Pathway") + ylab("Coefficient") + theme_classic() + theme(
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15),
+    axis.text.y = element_text(size = 15),
+    axis.text.x = element_text(
+      size = 10,
+      angle = 45,
+      hjust = 1
+    ),
+    strip.text.x = element_text(size = 15),
+    panel.border = element_rect(
+      fill = NA,
+      colour = "black",
+      size = 0.5
+    )
+  ) + geom_hline(yintercept = 0, linetype = 2) + scale_color_colorblind()
+fig_height = 7
+fig_width = 7
+
+```
+
