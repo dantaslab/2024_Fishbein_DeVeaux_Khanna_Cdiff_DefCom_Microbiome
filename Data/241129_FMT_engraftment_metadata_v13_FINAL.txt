@@ -1,0 +1,239 @@
+ID	SRA_ID	Mouse	Sample Type	DonorID	Species	Timepoint	Sex	Cage	CageAZ	Experiment	IndividualRxn	Reads_230215	SeqFilter	In vivo Analysis	Cdiffstrain	CFU	Toxin	LogCFU
+CDFMT_3	 CDFMT_3	1	Mouse stool	Donor 1	Mouse	5	F	18	C18	Expt1	Expt1_Donor 1_1	4279297	Keep	Keep	Donor1strain	18636.36	2.25	4.27
+CDFMT_4	 CDFMT_4	2	Mouse stool	Donor 1	Mouse	5	F	18	C18	Expt1	Expt1_Donor 1_2	9991085	Keep	Keep	Donor1strain	8467.74	0.3	3.93
+CDFMT_5	 CDFMT_5	4	Mouse stool	Donor 1	Mouse	5	F	18	C18	Expt1	Expt1_Donor 1_4	3670421	Keep	Keep	Donor1strain	7000	0.77	3.85
+CDFMT_41	 CDFMT_41	2	Mouse stool	Donor 1	Mouse	21	F	18	C18	Expt1	Expt1_Donor 1_2	4686902	Keep	Keep	Donor1strain	4500	1.31	3.65
+CDFMT_43	 CDFMT_43	4	Mouse stool	Donor 1	Mouse	21	F	18	C18	Expt1	Expt1_Donor 1_4	3376560	Keep	Keep	Donor1strain	1333.33	0.67	3.12
+220509_CDFMT-58	 DLAP-220509_CDFMT-58	1	Mouse stool	Donor 1	Mouse	4	F	26	C26	Expt2	Expt2_Donor 1_1	3256864	Keep	Keep	Donor1strain	157.89	0.37	2.2
+220509_CDFMT-59	 DLAP-220509_CDFMT-59	2	Mouse stool	Donor 1	Mouse	4	F	26	C26	Expt2	Expt2_Donor 1_2	4333834	Keep	Keep	Donor1strain	112.07	0.08	2.05
+220509_CDFMT-60	 DLAP-220509_CDFMT-60	3	Mouse stool	Donor 1	Mouse	4	F	26	C26	Expt2	Expt2_Donor 1_3	2170980	Keep	Keep	Donor1strain	8780.49	0.74	3.94
+220509_CDFMT-61	 DLAP-220509_CDFMT-61	4	Mouse stool	Donor 1	Mouse	4	F	26	C26	Expt2	Expt2_Donor 1_4	9091520	Keep	Keep	Donor1strain	2532.47	0.46	3.4
+220509_CDFMT-84	 DLAP-220509_CDFMT-84	1	Mouse stool	Donor 1	Mouse	7	M	27	C27	Expt2	Expt2_Donor 1_1	3018114	Keep	Keep	Donor1strain			
+220509_CDFMT-85	 DLAP-220509_CDFMT-85	2	Mouse stool	Donor 1	Mouse	7	M	27	C27	Expt2	Expt2_Donor 1_2	3439754	Keep	Keep	Donor1strain			
+220509_CDFMT-86	 DLAP-220509_CDFMT-86	3	Mouse stool	Donor 1	Mouse	7	F	26	C26	Expt2	Expt2_Donor 1_3	5081704	Keep	Keep	Donor1strain			
+Expt2_eng_stool_2	Expt2_eng_stool_2	1	Mouse stool	Donor 1	Mouse	21	M	27	C27	Expt2	Expt2_Donor 1_1	5345889	Keep	Keep	Donor1strain	10750	1.8	4.03
+Expt2_eng_stool_3	Expt2_eng_stool_3	2	Mouse stool	Donor 1	Mouse	21	M	27	C27	Expt2	Expt2_Donor 1_2	6358225	Keep	Keep	Donor1strain	4027.78	0.97	3.61
+Expt2_eng_stool_4	Expt2_eng_stool_4	3	Mouse stool	Donor 1	Mouse	21	F	26	C26	Expt2	Expt2_Donor 1_3	9927523	Keep	Keep	Donor1strain	8906.25	1.23	3.95
+Expt2_eng_stool_1	Expt2_eng_stool_1	4	Mouse stool	Donor 1	Mouse	21	F	26	C26	Expt2	Expt2_Donor 1_4	5900306	Keep	Keep	Donor1strain	8815.79	1.04	3.95
+S97	 DLAP-97	1	Mouse stool	Donor 10	Mouse	4	M	1	C1	Expt3	Expt3_Donor 10_1	2751945	Keep	Keep	ST42	22619.05	0.42	4.35
+S98	 DLAP-98	2	Mouse stool	Donor 10	Mouse	4	M	1	C1	Expt3	Expt3_Donor 10_2	3086459	Keep	Keep	ST42	6896.55	0.39	3.84
+S99	 DLAP-99	3	Mouse stool	Donor 10	Mouse	4	F	2	C2	Expt3	Expt3_Donor 10_3	3299859	Keep	Keep	ST42	38235.29	2.23	4.58
+S175	175	1	Mouse stool	Donor 10	Mouse	21	M	1	C1	Expt3	Expt3_Donor 10_1	13837516	Keep	Keep	ST42	1369.86	0.34	3.14
+S176	176	2	Mouse stool	Donor 10	Mouse	21	M	1	C1	Expt3	Expt3_Donor 10_2	8732630	Keep	Keep	ST42	689.66	0.67	2.84
+S177	177	3	Mouse stool	Donor 10	Mouse	21	F	2	C2	Expt3	Expt3_Donor 10_3	6811966	Keep	Keep	ST42	1915.89	0.3	3.28
+S101	 DLAP-101	1	Mouse stool	Donor 13	Mouse	4	M	3	C3	Expt3	Expt3_Donor 13_1	3815565	Keep	Keep	ST42	5636.36	0.57	3.75
+S102	 DLAP-102	2	Mouse stool	Donor 13	Mouse	4	M	3	C3	Expt3	Expt3_Donor 13_2	3612164	Keep	Keep	ST42	4485.29	0.51	3.65
+S103	 DLAP-103	3	Mouse stool	Donor 13	Mouse	4	F	4	C4	Expt3	Expt3_Donor 13_3	3354858	Keep	Keep	ST42	4718.31	0.53	3.67
+S104	 DLAP-104	4	Mouse stool	Donor 13	Mouse	4	F	4	C4	Expt3	Expt3_Donor 13_4	3641065	Keep	Keep	ST42	3695.65	0.75	3.57
+S179	179	1	Mouse stool	Donor 13	Mouse	21	M	3	C3	Expt3	Expt3_Donor 13_1	6418757	Keep	Keep	ST42	35365.85	0.98	4.55
+S180	180	2	Mouse stool	Donor 13	Mouse	21	M	3	C3	Expt3	Expt3_Donor 13_2	9775139	Keep	Keep	ST42	9219.86	0.28	3.96
+S181	181	3	Mouse stool	Donor 13	Mouse	21	F	4	C4	Expt3	Expt3_Donor 13_3	6220903	Keep	Keep	ST42	28750	1.02	4.46
+S182	182	4	Mouse stool	Donor 13	Mouse	21	F	4	C4	Expt3	Expt3_Donor 13_4	9493505	Keep	Keep	ST42	9615.38	0.75	3.98
+S105	 DLAP-105	1	Mouse stool	Donor 14	Mouse	4	M	5	C5	Expt3	Expt3_Donor 14_1	3162630	Keep	Keep	ST42	20476.19	0.31	4.31
+S107	 DLAP-107	4	Mouse stool	Donor 14	Mouse	4	F	6	C6	Expt3	Expt3_Donor 14_4	2892084	Keep	Keep	ST42	12500	0.94	4.1
+S183	183	1	Mouse stool	Donor 14	Mouse	21	M	5	C5	Expt3	Expt3_Donor 14_1	9586386	Keep	Keep	ST42	276.92	0.07	2.44
+S184	184	2	Mouse stool	Donor 14	Mouse	21	M	5	C5	Expt3	Expt3_Donor 14_2	10775760	Keep	Keep	ST42	684.93	0.27	2.84
+S185	185	3	Mouse stool	Donor 14	Mouse	21	F	6	C6	Expt3	Expt3_Donor 14_3	9288248	Keep	Keep	ST42	3000	1.07	3.48
+S186	186	4	Mouse stool	Donor 14	Mouse	21	F	6	C6	Expt3	Expt3_Donor 14_4	8479710	Keep	Keep	ST42	2978.72	0.43	3.47
+S109	 DLAP-109	2	Mouse stool	Donor 15	Mouse	4	M	7	C7	Expt3	Expt3_Donor 15_2	4152566	Keep	Keep	ST2	965.52	1.13	2.98
+S110	 DLAP-110	3	Mouse stool	Donor 15	Mouse	4	F	8	C8	Expt3	Expt3_Donor 15_3	3866700	Keep	Keep	ST2	29000	0.61	4.46
+S111	 DLAP-111	4	Mouse stool	Donor 15	Mouse	4	F	8	C8	Expt3	Expt3_Donor 15_4	3997815	Keep	Keep	ST2	11111.11	0.51	4.05
+S187	187	1	Mouse stool	Donor 15	Mouse	21	M	7	C7	Expt3	Expt3_Donor 15_1	7356983	Keep	Keep	ST2	7954.55	1.76	3.9
+S188	188	2	Mouse stool	Donor 15	Mouse	21	M	7	C7	Expt3	Expt3_Donor 15_2	8920970	Keep	Keep	ST2	588.24	0.2	2.77
+S189	189	3	Mouse stool	Donor 15	Mouse	21	F	8	C8	Expt3	Expt3_Donor 15_3	10175328	Keep	Keep	ST2	820.9	0.48	2.91
+S190	190	4	Mouse stool	Donor 15	Mouse	21	F	8	C8	Expt3	Expt3_Donor 15_4	5342366	Keep	Keep	ST2	153.06	0.48	2.18
+S112	 DLAP-112	3	Mouse stool	Donor 16	Mouse	4	F	9	C9	Expt3	Expt3_Donor 16_3	4676855	Keep	Keep	ST2	3292.68	0.3	3.52
+S113	 DLAP-113	4	Mouse stool	Donor 16	Mouse	4	F	9	C9	Expt3	Expt3_Donor 16_4	3767123	Keep	Keep	ST2	9090.91	0.52	3.96
+S191	191	1	Mouse stool	Donor 16	Mouse	21	M	10	C10	Expt3	Expt3_Donor 16_1	8041973	Keep	Keep	ST2	112.68	0.22	2.05
+S192	192	3	Mouse stool	Donor 16	Mouse	21	F	9	C9	Expt3	Expt3_Donor 16_3	5361997	Keep	Keep	ST2	175.44	0.14	2.24
+S193	193	4	Mouse stool	Donor 16	Mouse	21	F	9	C9	Expt3	Expt3_Donor 16_4	7675213	Keep	Keep	ST2	172.41	0.09	2.24
+CDFMT_6	 CDFMT_6	1	Mouse stool	Donor 2	Mouse	5	F	19	C19	Expt1	Expt1_Donor 2_1	5931583	Keep	Keep	Donor2strain	1319.44	0.17	3.12
+CDFMT_7	 CDFMT_7	2	Mouse stool	Donor 2	Mouse	5	F	19	C19	Expt1	Expt1_Donor 2_2	5153694	Keep	Keep	Donor2strain	148.44	0.24	2.17
+CDFMT_8	 CDFMT_8	3	Mouse stool	Donor 2	Mouse	5	F	19	C19	Expt1	Expt1_Donor 2_3	5224343	Keep	Keep	Donor2strain	1959.46	0.55	3.29
+CDFMT_9	 CDFMT_9	4	Mouse stool	Donor 2	Mouse	5	F	19	C19	Expt1	Expt1_Donor 2_4	4707648	Keep	Keep	Donor2strain	2857.14	0.32	3.46
+CDFMT_44	 CDFMT_44	1	Mouse stool	Donor 2	Mouse	21	F	19	C19	Expt1	Expt1_Donor 2_1	3508375	Keep	Keep	Donor2strain	2125	0.98	3.33
+NextSeq1_1-4	 NextSeq1_1-4	2	Mouse stool	Donor 2	Mouse	21	F	19	C19	Expt1	Expt1_Donor 2_2	4392471	Keep	Keep	Donor2strain	390	0.75	2.59
+NextSeq1_1-5	 NextSeq1_1-5	3	Mouse stool	Donor 2	Mouse	21	F	19	C19	Expt1	Expt1_Donor 2_3	4844667	Keep	Keep	Donor2strain	573.53	0.87	2.76
+NextSeq1_1-6	 NextSeq1_1-6	4	Mouse stool	Donor 2	Mouse	21	F	19	C19	Expt1	Expt1_Donor 2_4	4398722	Keep	Keep	Donor2strain	1282.05	0.66	3.11
+220509_CDFMT-62	 DLAP-220509_CDFMT-62	1	Mouse stool	Donor 2	Mouse	4	M	28	C28	Expt2	Expt2_Donor 2_1	6931312	Keep	Keep	Donor2strain	25833.33	0.39	4.41
+220509_CDFMT-63	 DLAP-220509_CDFMT-63	2	Mouse stool	Donor 2	Mouse	4	M	28	C28	Expt2	Expt2_Donor 2_2	4408982	Keep	Keep	Donor2strain	85135.14	0.49	4.93
+220509_CDFMT-64	 DLAP-220509_CDFMT-64	3	Mouse stool	Donor 2	Mouse	4	F	29	C29	Expt2	Expt2_Donor 2_3	14227857	Keep	Keep	Donor2strain	3173.08	0.51	3.5
+220509_CDFMT-65	 DLAP-220509_CDFMT-65	4	Mouse stool	Donor 2	Mouse	4	F	29	C29	Expt2	Expt2_Donor 2_4	2395678	Keep	Keep	Donor2strain	4342.11	0.52	3.64
+Expt2_eng_stool_5	Expt2_eng_stool_5	1	Mouse stool	Donor 2	Mouse	21	M	28	C28	Expt2	Expt2_Donor 2_1	10198003	Keep	Keep	Donor2strain	42391.3	0.89	4.63
+Expt2_eng_stool_8	Expt2_eng_stool_8	2	Mouse stool	Donor 2	Mouse	21	M	28	C28	Expt2	Expt2_Donor 2_2	6715677	Keep	Keep	Donor2strain	35937.5	1.24	4.56
+Expt2_eng_stool_7	Expt2_eng_stool_7	3	Mouse stool	Donor 2	Mouse	21	F	29	C29	Expt2	Expt2_Donor 2_3	5854919	Keep	Keep	Donor2strain	18604.65	0.81	4.27
+Expt2_eng_stool_6	Expt2_eng_stool_6	4	Mouse stool	Donor 2	Mouse	21	F	29	C29	Expt2	Expt2_Donor 2_4	10364231	Keep	Keep	Donor2strain	15753.42	0.5	4.2
+S198	198	3	Mouse stool	Donor 22	Mouse	21	F	11	C11	Expt3	Expt3_Donor 22_3	6536411	Keep	Keep	ST42	51041.67	0.8	4.71
+S199	199	4	Mouse stool	Donor 22	Mouse	21	F	11	C11	Expt3	Expt3_Donor 22_4	6154199	Keep	Keep	ST42	33333.33	0.94	4.52
+DLAP-S114	 DLAP-114	1	Mouse stool	Donor 24	Mouse	4	M	14	C14	Expt3	Expt3_Donor 24_1	3699794	Keep	Keep	ST2	22368.42	0.61	4.35
+DLAP-S115	 DLAP-115	3	Mouse stool	Donor 24	Mouse	4	F	15	C15	Expt3	Expt3_Donor 24_3	3279420	Keep	Keep	ST2	14375	0.43	4.16
+DLAP-S116	 DLAP-116	4	Mouse stool	Donor 24	Mouse	4	F	15	C15	Expt3	Expt3_Donor 24_4	3868190	Keep	Keep	ST2	4692.31	0.26	3.67
+S202	202	1	Mouse stool	Donor 24	Mouse	21	M	14	C14	Expt3	Expt3_Donor 24_1	9881469	Keep	Keep	ST2	1050	0.08	3.02
+S203	203	2	Mouse stool	Donor 24	Mouse	21	M	14	C14	Expt3	Expt3_Donor 24_2	6834185	Keep	Keep	ST2	294.12	0.39	2.47
+S204	204	3	Mouse stool	Donor 24	Mouse	21	F	15	C15	Expt3	Expt3_Donor 24_3	8176071	Keep	Keep	ST2	267.86	0.12	2.43
+S205	205	4	Mouse stool	Donor 24	Mouse	21	F	15	C15	Expt3	Expt3_Donor 24_4	8530534	Keep	Keep	ST2	729.17	0.17	2.86
+CDFMT_10	 CDFMT_10	1	Mouse stool	Donor 3	Mouse	5	F	20	C20	Expt1	Expt1_Donor 3_1	12511520	Keep	Keep	Donor3strain	5000	0.93	3.7
+CDFMT_11	 CDFMT_11	2	Mouse stool	Donor 3	Mouse	5	F	20	C20	Expt1	Expt1_Donor 3_2	5839534	Keep	Keep	Donor3strain	16666.67	0.78	4.22
+CDFMT_12	 CDFMT_12	3	Mouse stool	Donor 3	Mouse	5	F	20	C20	Expt1	Expt1_Donor 3_3	4299985	Keep	Keep	Donor3strain	1707.32	0.5	3.23
+CDFMT_13	 CDFMT_13	4	Mouse stool	Donor 3	Mouse	5	F	20	C20	Expt1	Expt1_Donor 3_4	9007023	Keep	Keep	Donor3strain	6481.48	1.31	3.81
+NextSeq1_1-7	 NextSeq1_1-7	1	Mouse stool	Donor 3	Mouse	21	F	20	C20	Expt1	Expt1_Donor 3_1	4288809	Keep	Keep	Donor3strain	2674.42	0.84	3.43
+NextSeq1_1-8	 NextSeq1_1-8	2	Mouse stool	Donor 3	Mouse	21	F	20	C20	Expt1	Expt1_Donor 3_2	4128384	Keep	Keep	Donor3strain	2551.02	0.69	3.41
+NextSeq1_1-9	 NextSeq1_1-9	4	Mouse stool	Donor 3	Mouse	21	F	20	C20	Expt1	Expt1_Donor 3_4	4082215	Keep	Keep	Donor3strain	7526.88	0.4	3.88
+Expt2_eng_stool_10	Expt2_eng_stool_10	1	Mouse stool	Donor 3	Mouse	21	M	30	C30	Expt2	Expt2_Donor 3_1	11510486	Keep	Keep	Donor3strain	14893.62	0.82	4.17
+Expt2_eng_stool_9	Expt2_eng_stool_9	2	Mouse stool	Donor 3	Mouse	21	M	30	C30	Expt2	Expt2_Donor 3_2	8728160	Keep	Keep	Donor3strain	7851.24	0.34	3.89
+CDFMT_14	 CDFMT_14	1	Mouse stool	Donor 4	Mouse	5	F	21	C21	Expt1	Expt1_Donor 4_1	11936098	Keep	Keep	ST2	13846.15	0.5	4.14
+CDFMT_15	 CDFMT_15	2	Mouse stool	Donor 4	Mouse	5	F	21	C21	Expt1	Expt1_Donor 4_2	3503485	Keep	Keep	ST2	14705.88	0.49	4.17
+CDFMT_16	 CDFMT_16	3	Mouse stool	Donor 4	Mouse	5	F	21	C21	Expt1	Expt1_Donor 4_3	10725985	Keep	Keep	ST2	19540.23	0.37	4.29
+CDFMT_17	 CDFMT_17	4	Mouse stool	Donor 4	Mouse	5	F	21	C21	Expt1	Expt1_Donor 4_4	4977997	Keep	Keep	ST2	27419.35	0.39	4.44
+NextSeq1_1-10	 NextSeq1_1-10	1	Mouse stool	Donor 4	Mouse	21	F	21	C21	Expt1	Expt1_Donor 4_1	4207959	Keep	Keep	ST2	3534.48	0.66	3.55
+NextSeq1_1-11	 NextSeq1_1-11	2	Mouse stool	Donor 4	Mouse	21	F	21	C21	Expt1	Expt1_Donor 4_2	4274905	Keep	Keep	ST2	5714.29	0.99	3.76
+NextSeq1_1-12	 NextSeq1_1-12	3	Mouse stool	Donor 4	Mouse	21	F	21	C21	Expt1	Expt1_Donor 4_3	4252553	Keep	Keep	ST2	5857.14	1.03	3.77
+NextSeq1_1-13	 NextSeq1_1-13	4	Mouse stool	Donor 4	Mouse	21	F	21	C21	Expt1	Expt1_Donor 4_4	4488789	Keep	Keep	ST2	7142.86	1.31	3.85
+220509_CDFMT-68	 DLAP-220509_CDFMT-68	2	Mouse stool	Donor 4	Mouse	4	M	32	C32	Expt2	Expt2_Donor 4_2	4219792	Keep	Keep	ST2	21929.82	0.33	4.34
+220509_CDFMT-69	 DLAP-220509_CDFMT-69	3	Mouse stool	Donor 4	Mouse	4	F	33	C33	Expt2	Expt2_Donor 4_3	3248899	Keep	Keep	ST2	92187.5	1.05	4.96
+Expt2_eng_stool_14	Expt2_eng_stool_14	1	Mouse stool	Donor 4	Mouse	21	M	32	C32	Expt2	Expt2_Donor 4_1	9144531	Keep	Keep	ST2	3586.96	0.71	3.55
+Expt2_eng_stool_13	Expt2_eng_stool_13	2	Mouse stool	Donor 4	Mouse	21	M	32	C32	Expt2	Expt2_Donor 4_2	10649049	Keep	Keep	ST2	3437.5	1.1	3.54
+Expt2_eng_stool_12	Expt2_eng_stool_12	3	Mouse stool	Donor 4	Mouse	21	F	33	C33	Expt2	Expt2_Donor 4_3	11700305	Keep	Keep	ST2	1046.51	0.51	3.02
+Expt2_eng_stool_11	Expt2_eng_stool_11	4	Mouse stool	Donor 4	Mouse	21	F	33	C33	Expt2	Expt2_Donor 4_4	11557029	Keep	Keep	ST2	2727.27	0.7	3.44
+NextSeq1_1-14	 NextSeq1_1-14	1	Mouse stool	Donor 6	Mouse	21	F	23	C23	Expt1	Expt1_Donor 6_1	4681820	Keep	Keep	Donor6strain	7441.86	0.45	3.87
+NextSeq1_1-15	 NextSeq1_1-15	2	Mouse stool	Donor 6	Mouse	21	F	23	C23	Expt1	Expt1_Donor 6_2	4551258	Keep	Keep	Donor6strain	9200	1.14	3.96
+NextSeq1_1-16	 NextSeq1_1-16	3	Mouse stool	Donor 6	Mouse	21	F	23	C23	Expt1	Expt1_Donor 6_3	4664600	Keep	Keep	Donor6strain	2500	0.99	3.4
+220509_CDFMT-70	 DLAP-220509_CDFMT-70	1	Mouse stool	Donor 6	Mouse	4	M	36	C36	Expt2	Expt2_Donor 6_1	2778814	Keep	Keep	Donor6strain	11392.41	0.08	4.06
+220509_CDFMT-71	 DLAP-220509_CDFMT-71	2	Mouse stool	Donor 6	Mouse	4	M	36	C36	Expt2	Expt2_Donor 6_2	3204744	Keep	Keep	Donor6strain	25000	0.86	4.4
+220509_CDFMT-72	 DLAP-220509_CDFMT-72	3	Mouse stool	Donor 6	Mouse	4	F	37	C37	Expt2	Expt2_Donor 6_3	4177419	Keep	Keep	Donor6strain	2421.88	0.06	3.38
+Expt2_eng_stool_17	Expt2_eng_stool_17	1	Mouse stool	Donor 6	Mouse	21	M	36	C36	Expt2	Expt2_Donor 6_1	9392994	Keep	Keep	Donor6strain	4833.33	1.2	3.68
+Expt2_eng_stool_16	Expt2_eng_stool_16	2	Mouse stool	Donor 6	Mouse	21	M	36	C36	Expt2	Expt2_Donor 6_2	11034260	Keep	Keep	Donor6strain	5531.91	0.77	3.74
+Expt2_eng_stool_15	Expt2_eng_stool_15	3	Mouse stool	Donor 6	Mouse	21	F	37	C37	Expt2	Expt2_Donor 6_3	12509911	Keep	Keep	Donor6strain	3333.33	1	3.52
+Expt2_eng_stool_18	Expt2_eng_stool_18	4	Mouse stool	Donor 6	Mouse	21	F	37	C37	Expt2	Expt2_Donor 6_4	8541458	Keep	Keep	Donor6strain	550	0.85	2.74
+S118	118	1	Mouse stool	Donor 10	Mouse	7	M	1	C1	Expt3	Expt3_Donor 10_1	6064891	Keep	Keep	ST42			
+S119	119	2	Mouse stool	Donor 10	Mouse	7	M	1	C1	Expt3	Expt3_Donor 10_2	6516627	Keep	Keep	ST42			
+S120	120	3	Mouse stool	Donor 10	Mouse	7	F	2	C2	Expt3	Expt3_Donor 10_3	7404500	Keep	Keep	ST42			
+S121	121	4	Mouse stool	Donor 10	Mouse	7	F	2	C2	Expt3	Expt3_Donor 10_4	8694253	Keep	Keep	ST42			
+S122	122	1	Mouse stool	Donor 13	Mouse	7	M	3	C3	Expt3	Expt3_Donor 13_1	6138312	Keep	Keep	ST42			
+S123	123	2	Mouse stool	Donor 13	Mouse	7	M	3	C3	Expt3	Expt3_Donor 13_2	7159750	Keep	Keep	ST42			
+S124	124	3	Mouse stool	Donor 13	Mouse	7	F	4	C4	Expt3	Expt3_Donor 13_3	8509117	Keep	Keep	ST42			
+S125	125	4	Mouse stool	Donor 13	Mouse	7	F	4	C4	Expt3	Expt3_Donor 13_4	5199125	Keep	Keep	ST42			
+S126	126	1	Mouse stool	Donor 14	Mouse	7	M	5	C5	Expt3	Expt3_Donor 14_1	7993596	Keep	Keep	ST42			
+S127	127	3	Mouse stool	Donor 14	Mouse	7	F	6	C6	Expt3	Expt3_Donor 14_3	5256859	Keep	Keep	ST42			
+S128	128	4	Mouse stool	Donor 14	Mouse	7	F	6	C6	Expt3	Expt3_Donor 14_4	5786150	Keep	Keep	ST42			
+S129	129	1	Mouse stool	Donor 15	Mouse	7	M	7	C7	Expt3	Expt3_Donor 15_1	6030749	Keep	Keep	ST2			
+S130	130	3	Mouse stool	Donor 15	Mouse	7	F	8	C8	Expt3	Expt3_Donor 15_3	7795802	Keep	Keep	ST2			
+S131	131	4	Mouse stool	Donor 15	Mouse	7	F	8	C8	Expt3	Expt3_Donor 15_4	9515279	Keep	Keep	ST2			
+S132	132	1	Mouse stool	Donor 16	Mouse	7	M	10	C10	Expt3	Expt3_Donor 16_1	13089950	Keep	Keep	ST2			
+S133	133	2	Mouse stool	Donor 16	Mouse	7	M	10	C10	Expt3	Expt3_Donor 16_2	7027386	Keep	Keep	ST2			
+S134	134	3	Mouse stool	Donor 16	Mouse	7	F	9	C9	Expt3	Expt3_Donor 16_3	5801183	Keep	Keep	ST2			
+S135	135	1	Mouse stool	HV	Mouse	7	M		C	Expt3	Expt3_HV_1	5900692	Keep	Discard				
+S136	136	2	Mouse stool	HV	Mouse	7	M		C	Expt3	Expt3_HV_2	7006286	Keep	Discard				
+S137	137	3	Mouse stool	HV	Mouse	7	F		C	Expt3	Expt3_HV_3	7335595	Keep	Discard				
+S160	160	4	Mouse stool	HV	Mouse	7	F		C	Expt3	Expt3_HV_4	6352251	Keep	Discard				
+S161	161	3	Mouse stool	Donor 22	Mouse	7	F	11	C11	Expt3	Expt3_Donor 22_3	5240910	Keep	Keep	ST42			
+S162	162	4	Mouse stool	Donor 22	Mouse	7	F	11	C11	Expt3	Expt3_Donor 22_4	5194056	Keep	Keep	ST42			
+S167	167	1	Mouse stool	Donor 24	Mouse	7	M	14	C14	Expt3	Expt3_Donor 24_1	5327008	Keep	Keep	ST2			
+S168	168	2	Mouse stool	Donor 24	Mouse	7	M	14	C14	Expt3	Expt3_Donor 24_2	8981364	Keep	Keep	ST2			
+S169	169	3	Mouse stool	Donor 24	Mouse	7	F	15	C15	Expt3	Expt3_Donor 24_3	5832599	Keep	Keep	ST2			
+S170	170	4	Mouse stool	Donor 24	Mouse	7	F	15	C15	Expt3	Expt3_Donor 24_4	8190782	Keep	Keep	ST2			
+S194	194	1	Mouse stool	HV	Mouse	21	M		C	Expt3	Expt3_HV_1	4953037	Keep	Discard				
+S195	195	2	Mouse stool	HV	Mouse	21	M		C	Expt3	Expt3_HV_2	5415972	Keep	Discard				
+S196	196	3	Mouse stool	HV	Mouse	21	F		C	Expt3	Expt3_HV_3	7491385	Keep	Discard				
+S197	197	4	Mouse stool	HV	Mouse	21	F		C	Expt3	Expt3_HV_4	5318979	Keep	Discard				
+S210	210	1	Mouse stool	Donor 10	Mouse	14	M	1	C1	Expt3	Expt3_Donor 10_1	6236541	Keep	Keep	ST42			
+S211	211	2	Mouse stool	Donor 10	Mouse	14	M	1	C1	Expt3	Expt3_Donor 10_2	6942326	Keep	Keep	ST42			
+S212	212	3	Mouse stool	Donor 10	Mouse	14	F	2	C2	Expt3	Expt3_Donor 10_3	9314320	Keep	Keep	ST42			
+S214	214	1	Mouse stool	Donor 13	Mouse	14	M	3	C3	Expt3	Expt3_Donor 13_1	5432975	Keep	Keep	ST42			
+S215	215	2	Mouse stool	Donor 13	Mouse	14	M	3	C3	Expt3	Expt3_Donor 13_2	9621764	Keep	Keep	ST42			
+S216	216	3	Mouse stool	Donor 13	Mouse	14	F	4	C4	Expt3	Expt3_Donor 13_3	5241711	Keep	Keep	ST42			
+S217	217	4	Mouse stool	Donor 13	Mouse	14	F	4	C4	Expt3	Expt3_Donor 13_4	5135214	Keep	Keep	ST42			
+S218	218	1	Mouse stool	Donor 14	Mouse	14	M	5	C5	Expt3	Expt3_Donor 14_1	7873153	Keep	Keep	ST42			
+S219	219	2	Mouse stool	Donor 14	Mouse	14	M	5	C5	Expt3	Expt3_Donor 14_2	5153782	Keep	Keep	ST42			
+S220	220	3	Mouse stool	Donor 14	Mouse	14	F	6	C6	Expt3	Expt3_Donor 14_3	5315858	Keep	Keep	ST42			
+S221	221	4	Mouse stool	Donor 14	Mouse	14	F	6	C6	Expt3	Expt3_Donor 14_4	8313000	Keep	Keep	ST42			
+S222	222	1	Mouse stool	Donor 15	Mouse	14	M	7	C7	Expt3	Expt3_Donor 15_1	27489361	Keep	Keep	ST2			
+S223	223	2	Mouse stool	Donor 15	Mouse	14	M	7	C7	Expt3	Expt3_Donor 15_2	5672233	Keep	Keep	ST2			
+S224	224	3	Mouse stool	Donor 15	Mouse	14	F	8	C8	Expt3	Expt3_Donor 15_3	7756845	Keep	Keep	ST2			
+S225	225	4	Mouse stool	Donor 15	Mouse	14	F	8	C8	Expt3	Expt3_Donor 15_4	9354529	Keep	Keep	ST2			
+S226	226	1	Mouse stool	Donor 16	Mouse	14	M	10	C10	Expt3	Expt3_Donor 16_1	6128510	Keep	Keep	ST2			
+S227	227	2	Mouse stool	Donor 16	Mouse	14	M	10	C10	Expt3	Expt3_Donor 16_2	4217521	Keep	Keep	ST2			
+S228	228	3	Mouse stool	Donor 16	Mouse	14	F	9	C9	Expt3	Expt3_Donor 16_3	5485877	Keep	Keep	ST2			
+S229	229	4	Mouse stool	Donor 16	Mouse	14	F	9	C9	Expt3	Expt3_Donor 16_4	9118933	Keep	Keep	ST2			
+S230	230	1	Mouse stool	HV	Mouse	14	M		C	Expt3	Expt3_HV_1	7441745	Keep	Discard				
+S231	231	2	Mouse stool	HV	Mouse	14	M		C	Expt3	Expt3_HV_2	8102962	Keep	Discard				
+S252	252	3	Mouse stool	HV	Mouse	14	F		C	Expt3	Expt3_HV_3	5569967	Keep	Discard				
+S253	253	4	Mouse stool	HV	Mouse	14	F		C	Expt3	Expt3_HV_4	5979550	Keep	Discard				
+S254	254	3	Mouse stool	Donor 22	Mouse	14	F	11	C11	Expt3	Expt3_Donor 22_3	4806332	Keep	Keep	ST42			
+S255	255	4	Mouse stool	Donor 22	Mouse	14	F	11	C11	Expt3	Expt3_Donor 22_4	5632880	Keep	Keep	ST42			
+S260	260	1	Mouse stool	Donor 24	Mouse	14	M	14	C14	Expt3	Expt3_Donor 24_1	9240509	Keep	Keep	ST2			
+S262	262	3	Mouse stool	Donor 24	Mouse	14	F	15	C15	Expt3	Expt3_Donor 24_3	6042341	Keep	Keep	ST2			
+S263	263	4	Mouse stool	Donor 24	Mouse	14	F	15	C15	Expt3	Expt3_Donor 24_4	10537457	Keep	Keep	ST2			
+S268	268	1	Mouse stool	Donor 10	Mouse	28	M	1	C1	Expt3	Expt3_Donor 10_1	4957271	Keep		ST42			
+S269	269	2	Mouse stool	Donor 10	Mouse	28	M	1	C1	Expt3	Expt3_Donor 10_2	6927510	Keep		ST42			
+S270	270	3	Mouse stool	Donor 10	Mouse	28	F	2	C2	Expt3	Expt3_Donor 10_3	7736897	Keep		ST42			
+S271	271	4	Mouse stool	Donor 10	Mouse	28	F	2	C2	Expt3	Expt3_Donor 10_4	6267362	Keep		ST42			
+S272	272	1	Mouse stool	Donor 13	Mouse	28	M	3	C3	Expt3	Expt3_Donor 13_1	6431640	Keep		ST42			
+S273	273	2	Mouse stool	Donor 13	Mouse	28	M	3	C3	Expt3	Expt3_Donor 13_2	5854669	Keep		ST42			
+S274	274	3	Mouse stool	Donor 13	Mouse	28	F	4	C4	Expt3	Expt3_Donor 13_3	5533705	Keep		ST42			
+S275	275	1	Mouse stool	Donor 14	Mouse	28	M	5	C5	Expt3	Expt3_Donor 14_1	7247380	Keep	Keep	ST42			
+S300	300	2	Mouse stool	Donor 14	Mouse	28	M	5	C5	Expt3	Expt3_Donor 14_2	5066388	Keep	Keep	ST42			
+S301	301	3	Mouse stool	Donor 14	Mouse	28	F	6	C6	Expt3	Expt3_Donor 14_3	5445790	Keep	Keep	ST42			
+S302	302	4	Mouse stool	Donor 14	Mouse	28	F	6	C6	Expt3	Expt3_Donor 14_4	6607850	Keep	Keep	ST42			
+S303	303	1	Mouse stool	Donor 15	Mouse	28	M	7	C7	Expt3	Expt3_Donor 15_1	8516301	Keep	Keep	ST2			
+S304	304	2	Mouse stool	Donor 15	Mouse	28	M	7	C7	Expt3	Expt3_Donor 15_2	5469254	Keep	Keep	ST2			
+S305	305	3	Mouse stool	Donor 15	Mouse	28	F	8	C8	Expt3	Expt3_Donor 15_3	6277556	Keep	Keep	ST2			
+S306	306	4	Mouse stool	Donor 15	Mouse	28	F	8	C8	Expt3	Expt3_Donor 15_4	6694272	Keep	Keep	ST2			
+S307	307	1	Mouse stool	Donor 16	Mouse	28	M	10	C10	Expt3	Expt3_Donor 16_1	5387943	Keep	Keep	ST2			
+S308	308	2	Mouse stool	Donor 16	Mouse	28	M	10	C10	Expt3	Expt3_Donor 16_2	5164277	Keep	Keep	ST2			
+S309	309	3	Mouse stool	Donor 16	Mouse	28	F	9	C9	Expt3	Expt3_Donor 16_3	6401416	Keep	Keep	ST2			
+S310	310	4	Mouse stool	Donor 16	Mouse	28	F	9	C9	Expt3	Expt3_Donor 16_4	4868814	Keep	Keep	ST2			
+S311	311	1	Mouse stool	HV	Mouse	28	M		C	Expt3	Expt3_HV_1	2913657	Keep	Discard				
+S312	312	2	Mouse stool	HV	Mouse	28	M		C	Expt3	Expt3_HV_2	5884258	Keep	Discard				
+S313	313	3	Mouse stool	HV	Mouse	28	F		C	Expt3	Expt3_HV_3	4793296	Keep	Discard				
+S314	314	4	Mouse stool	HV	Mouse	28	F		C	Expt3	Expt3_HV_4	5206163	Keep	Discard				
+S315	315	3	Mouse stool	Donor 22	Mouse	28	F	11	C11	Expt3	Expt3_Donor 22_3	5778161	Keep		ST42			
+S316	316	4	Mouse stool	Donor 22	Mouse	28	F	11	C11	Expt3	Expt3_Donor 22_4	5203825	Keep		ST42			
+S321	321	1	Mouse stool	Donor 24	Mouse	28	M	14	C14	Expt3	Expt3_Donor 24_1	5253772	Keep		ST2			
+S322	322	2	Mouse stool	Donor 24	Mouse	28	M	14	C14	Expt3	Expt3_Donor 24_2	8004529	Keep		ST2			
+S323	323	3	Mouse stool	Donor 24	Mouse	28	F	15	C15	Expt3	Expt3_Donor 24_3	8330772	Keep		ST2			
+CDFMT_18	 CDFMT_18	1	Mouse stool	Donor 6	Mouse	5	F	23	C23	Expt1	Expt1_Donor 6_1	5111722	Keep	Keep	Donor6strain			
+CDFMT_19	 CDFMT_19	2	Mouse stool	Donor 6	Mouse	5	F	23	C23	Expt1	Expt1_Donor 6_2	5110673	Keep	Keep	Donor6strain			
+CDFMT_21	 CDFMT_21	4	Mouse stool	Donor 6	Mouse	5	F	23	C23	Expt1	Expt1_Donor 6_4	4569939	Keep	Keep	Donor6strain			
+CDFMT_22	 CDFMT_22	3	Mouse stool	Donor 8	Mouse	5	F	25	C25	Expt1	Expt1_Donor 8_3	11760029	Keep	Keep				
+CDFMT_40	 CDFMT_40	1	Mouse stool	Donor 1	Mouse	21	F	18	C18	Expt1	Expt1_Donor 1_1	5467778	Keep	Keep	Donor1strain			
+S100	 DLAP-100	4	Mouse stool	Donor 10	Mouse	4	F	2	C2	Expt3	Expt3_Donor 10_4	3901109	Keep	Keep	ST42			
+220509_CDFMT-102	 DLAP-220509_CDFMT-102	3	Mouse stool	HV	Mouse	7	M		C	Expt2	Expt2_HV_3	3278953	Keep	Discard				
+220509_CDFMT-104	 DLAP-220509_CDFMT-104	1	Mouse stool	HV	Mouse	7	F		C	Expt2	Expt2_HV_1	5026566	Keep	Discard				
+220509_CDFMT-35	 DLAP-220509_CDFMT-35	1	Mouse stool	Donor 1	Mouse	14	M	27	C27	Expt2	Expt2_Donor 1_1	2438531	Keep	Keep	Donor1strain			
+220509_CDFMT-36	 DLAP-220509_CDFMT-36	2	Mouse stool	Donor 1	Mouse	14	M	27	C27	Expt2	Expt2_Donor 1_2	4645073	Keep	Keep	Donor1strain			
+220509_CDFMT-37	 DLAP-220509_CDFMT-37	3	Mouse stool	Donor 1	Mouse	14	F	26	C26	Expt2	Expt2_Donor 1_3	2844433	Keep	Keep	Donor1strain			
+220509_CDFMT-38	 DLAP-220509_CDFMT-38	4	Mouse stool	Donor 1	Mouse	14	F	26	C26	Expt2	Expt2_Donor 1_4	11904004	Keep	Keep	Donor1strain			
+220509_CDFMT-39	 DLAP-220509_CDFMT-39	1	Mouse stool	Donor 2	Mouse	14	M	28	C28	Expt2	Expt2_Donor 2_1	8057932	Keep	Keep	Donor2strain			
+220509_CDFMT-40	 DLAP-220509_CDFMT-40	2	Mouse stool	Donor 2	Mouse	14	M	28	C28	Expt2	Expt2_Donor 2_2	2257350	Keep	Keep	Donor2strain			
+220509_CDFMT-41	 DLAP-220509_CDFMT-41	3	Mouse stool	Donor 2	Mouse	14	F	29	C29	Expt2	Expt2_Donor 2_3	2695868	Keep	Keep	Donor2strain			
+220509_CDFMT-42	 DLAP-220509_CDFMT-42	4	Mouse stool	Donor 2	Mouse	14	F	29	C29	Expt2	Expt2_Donor 2_4	20468487	Keep	Keep	Donor2strain			
+220509_CDFMT-44	 DLAP-220509_CDFMT-44	2	Mouse stool	Donor 3	Mouse	14	M	30	C30	Expt2	Expt2_Donor 3_2	11240455	Keep	Keep	Donor3strain			
+220509_CDFMT-45	 DLAP-220509_CDFMT-45	2	Mouse stool	Donor 4	Mouse	14	M	32	C32	Expt2	Expt2_Donor 4_2	8951166	Keep	Keep	ST2			
+220509_CDFMT-46	 DLAP-220509_CDFMT-46	3	Mouse stool	Donor 4	Mouse	14	F	33	C33	Expt2	Expt2_Donor 4_3	2579905	Keep	Keep	ST2			
+220509_CDFMT-47	 DLAP-220509_CDFMT-47	4	Mouse stool	Donor 4	Mouse	14	F	33	C33	Expt2	Expt2_Donor 4_4	2516720	Keep	Keep	ST2			
+220509_CDFMT-49	 DLAP-220509_CDFMT-49	2	Mouse stool	Donor 6	Mouse	14	M	36	C36	Expt2	Expt2_Donor 6_2	3108876	Keep	Keep	Donor6strain			
+220509_CDFMT-50	 DLAP-220509_CDFMT-50	3	Mouse stool	Donor 6	Mouse	14	F	37	C37	Expt2	Expt2_Donor 6_3	3781264	Keep	Keep	Donor6strain			
+220509_CDFMT-51	 DLAP-220509_CDFMT-51	4	Mouse stool	Donor 6	Mouse	14	F	37	C37	Expt2	Expt2_Donor 6_4	4699560	Keep	Keep	Donor6strain			
+220509_CDFMT-54	 DLAP-220509_CDFMT-54	1	Mouse stool	HV	Mouse	14	M		C	Expt2	Expt2_HV_1	8793148	Keep	Discard				
+220509_CDFMT-55	 DLAP-220509_CDFMT-55	2	Mouse stool	HV	Mouse	14	M		C	Expt2	Expt2_HV_2	2088025	Keep	Discard				
+220509_CDFMT-56	 DLAP-220509_CDFMT-56	3	Mouse stool	HV	Mouse	14	F		C	Expt2	Expt2_HV_3	7984595	Keep	Discard				
+220509_CDFMT-57	 DLAP-220509_CDFMT-57	4	Mouse stool	HV	Mouse	14	F		C	Expt2	Expt2_HV_4	2265730	Keep	Discard				
+220509_CDFMT-66	 DLAP-220509_CDFMT-66	1	Mouse stool	Donor 3	Mouse	4	M	30	C30	Expt2	Expt2_Donor 3_1	2257138	Keep	Keep	Donor3strain			
+220509_CDFMT-73	 DLAP-220509_CDFMT-73	4	Mouse stool	Donor 6	Mouse	4	F	37	C37	Expt2	Expt2_Donor 6_4	7083525	Keep	Keep	Donor6strain			
+220509_CDFMT-74	 DLAP-220509_CDFMT-74	1	Mouse stool	HV	Mouse	4	M		C	Expt2	Expt2_HV_1	14343168	Keep	Discard				
+220509_CDFMT-75	 DLAP-220509_CDFMT-75	2	Mouse stool	HV	Mouse	4	M		C	Expt2	Expt2_HV_2	7338806	Keep	Discard				
+220509_CDFMT-76	 DLAP-220509_CDFMT-76	3	Mouse stool	HV	Mouse	4	F		C	Expt2	Expt2_HV_3	4239539	Keep	Discard				
+220509_CDFMT-77	 DLAP-220509_CDFMT-77	4	Mouse stool	HV	Mouse	4	F		C	Expt2	Expt2_HV_4	2286695	Keep	Discard				
+220509_CDFMT-87	 DLAP-220509_CDFMT-87	4	Mouse stool	Donor 1	Mouse	7	F	26	C26	Expt2	Expt2_Donor 1_4	2472065	Keep	Keep	Donor1strain			
+220509_CDFMT-88	 DLAP-220509_CDFMT-88	1	Mouse stool	Donor 2	Mouse	7	M	28	C28	Expt2	Expt2_Donor 2_1	2216126	Keep	Keep	Donor2strain			
+220509_CDFMT-89	 DLAP-220509_CDFMT-89	2	Mouse stool	Donor 2	Mouse	7	M	28	C28	Expt2	Expt2_Donor 2_2	3376624	Keep	Keep	Donor2strain			
+220509_CDFMT-90	 DLAP-220509_CDFMT-90	3	Mouse stool	Donor 2	Mouse	7	F	29	C29	Expt2	Expt2_Donor 2_3	2755574	Keep	Keep	Donor2strain			
+220509_CDFMT-91	 DLAP-220509_CDFMT-91	4	Mouse stool	Donor 2	Mouse	7	F	29	C29	Expt2	Expt2_Donor 2_4	4120477	Keep	Keep	Donor2strain			
+220509_CDFMT-92	 DLAP-220509_CDFMT-92	1	Mouse stool	Donor 3	Mouse	7	M	30	C30	Expt2	Expt2_Donor 3_1	6349619	Keep	Keep	Donor3strain			
+220509_CDFMT-93	 DLAP-220509_CDFMT-93	2	Mouse stool	Donor 3	Mouse	7	M	30	C30	Expt2	Expt2_Donor 3_2	2248330	Keep	Keep	Donor3strain			
+220509_CDFMT-94	 DLAP-220509_CDFMT-94	1	Mouse stool	Donor 4	Mouse	7	M	32	C32	Expt2	Expt2_Donor 4_1	3470536	Keep	Keep	ST2			
+220509_CDFMT-95	 DLAP-220509_CDFMT-95	2	Mouse stool	Donor 4	Mouse	7	M	32	C32	Expt2	Expt2_Donor 4_2	2748807	Keep	Keep	ST2			
+220509_CDFMT-96	 DLAP-220509_CDFMT-96	3	Mouse stool	Donor 4	Mouse	7	F	33	C33	Expt2	Expt2_Donor 4_3	3329427	Keep	Keep	ST2			
+NextSeq1_1-17	 NextSeq1_1-17	4	Mouse stool	Donor 6	Mouse	21	F	23	C23	Expt1	Expt1_Donor 6_4	4346521	Keep	Keep	Donor6strain			
+CDFMT_20	CDFMT_20	3	Mouse stool	Donor 6	Mouse	5	F	23	C23	Expt1	Expt1_Donor 6_3	5276361	Keep	Keep	Donor6strain			
