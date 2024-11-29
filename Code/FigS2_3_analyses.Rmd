@@ -95,7 +95,7 @@ filter(FMTsurvival,!(Donor%in%c("","5","7","8","22","3"))) %>%
   ggplot(aes(x=Strain,y=Toxin.Ratio))+geom_boxplot(outlier.shape=NA)+geom_jitter()+theme_classic() +theme(legend.position = "right",axis.title.x = element_text(size=15),axis.title.y = element_text(size=15),axis.text.y = element_text(size=15),axis.text.x =element_text(size=12, angle=45, hjust=1),strip.text.x = element_text(size=15),panel.border = element_rect(fill=NA, colour="black", size=0.5))+xlab("Donor")+ylab("TcdB Ratio")+scale_y_log10()+stat_pvalue_manual(statstest$res,label="P.adj",y=c(0.8,1,1.2))
 ```
 ```{r engraftment screen microbiome data input and formatting}
-FMT_total_md=read.delim("../data/241129_FMT_engraftment_metadata_v12_CFU_SRSF.txt",sep="\t",header=TRUE)
+FMT_total_md=read.delim("../data/241129_FMT_engraftment_metadata_v13_FINAL.txt",sep="\t",header=TRUE)
 row.names(FMT_total_md)=FMT_total_md$ID
 FMT_mphlan=read.delim("../data/241129_engraftment_mphlan4_raw.csv",sep=",",header=TRUE,check.names = FALSE)
 row.names(FMT_mphlan)<-FMT_mphlan$clade_name
