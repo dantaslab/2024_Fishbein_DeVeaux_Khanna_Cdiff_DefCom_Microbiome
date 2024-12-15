@@ -1,5 +1,5 @@
 #Code to replicate Figure S1 results
-#updated Friday, November 1st, 2024
+#updated Sunday, December 15th, 2024
 
 #setup----
 
@@ -196,7 +196,18 @@ h.p.pcoa.spp <- ggMarginal(h.ps.spp.meta.all %>%
 #look at overall ARG burden between groups
 ##load ShortBRED output----
 arg.full <- read.delim('ManuscriptAnalyses/Human/shortBRED/241101_shortBRED_out_final.txt')
-arg.wide <- dcast(arg.full, Sample ~ Family, value.var = 'Count')
+
+##load mapping file
+arg.map <- read.delim('ManuscriptAnalyses/Human/shortBRED/241215_ShortBRED_mapping.txt',
+                      header = F) %>% 
+  rename('Family' = 'V1',
+         'Class' = 'V2')
+arg.full.mapped <- left_join(arg.full,
+                             arg.map) %>% 
+  filter(Class %ni% c('STRESS', 'VIRULENCE'))
+
+##convert to wide format
+arg.wide <- dcast(arg.full.mapped, Sample ~ Family, value.var = 'Count')
 row.names(arg.wide) <- arg.wide$Sample
 arg.wide <- arg.wide[, c(-1)]
 
@@ -246,6 +257,9 @@ p.arg.richness <- arg.wide.meta %>%
   stat_pvalue_manual(stat.test5, label = 'p.adj', hide.ns = T, step.increase = 0.12) +
   scale_x_discrete(labels = c('CDI', 'Carrier', 'IC', 'HV'))
 
+# ggsave(p.arg.richness, file = 'ManuscriptDocs/Figures/FigureS1/241215_ARG_richness.pdf',
+#        width = 3.5, height = 4, units = 'in')
+
 ##plot RPKM (S1D)----
 p.arg.rpkm <- arg.wide.meta %>% 
   ggplot(aes(x = Group, y = RPKM)) +
@@ -259,6 +273,9 @@ p.arg.rpkm <- arg.wide.meta %>%
   stat_pvalue_manual(stat.test4, label = 'p.adj', hide.ns = T, step.increase = 0.075) +
   scale_y_continuous(trans = 'log10', labels = label_comma()) +
   scale_x_discrete(labels = c('CDI', 'carrier', 'IC', 'HV'))
+
+# ggsave(p.arg.rpkm, file = 'ManuscriptDocs/Figures/FigureS1/241215_ARG_rpkm.pdf',
+#        width = 3.5, height = 4, units = 'in')
 
 
 
